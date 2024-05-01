@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Kalevauva.fi kaupungit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Etusivu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+                                aria-expanded="false">Kaupungit</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                                <li><a class="dropdown-item" href="espoo.html">Espoo</a></li>
+                                <li><a class="dropdown-item" href="hameenlinna.html">Hämeenlinna</a></li>
+                                <li><a class="dropdown-item" href="jyvaskyla.html">Jyväskylä</a></li>
+                                <li><a class="dropdown-item" href="kouvola.html">Kouvola</a></li>
+                                <li><a class="dropdown-item" href="kuopio.html">Kuopio</a></li>
+                                <li><a class="dropdown-item" href="lahti.html">Lahti</a></li>
+                                <li><a class="dropdown-item" href="oulu.html">Oulu</a></li>
+                                <li><a class="dropdown-item" href="seinajoki.html">Seinäjoki</a></li>
+                                <li><a class="dropdown-item" href="tampere.html">Tampere</a></li>
+                                <li><a class="dropdown-item" href="turku.html">Turku</a></li>
+                                <li><a class="dropdown-item" href="vantaa.html">Vantaa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+                                aria-expanded="false">Ulkopuoliset linkit</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                                <li><a class="dropdown-item" href="https://www.kalevauva.fi/"
+                                        target="_blank">Kalevauva.fi</a></li>
+                                <li><a class="dropdown-item" href="https://www.facebook.com/kalevauva.fi/"
+                                        target="_blank">Facebook</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://open.spotify.com/artist/1ioqNoEEWHqbpyjhe1LilZ?si=8_30A7FyS_mqa6G2Jn4UQw"
+                                        target="_blank">Spotify</a></li>
+                                <li><a class="dropdown-item" href="https://www.youtube.com/@KalevauvaFI"
+                                        target="_blank">YouTube</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="yhteydenotto.html">Yhteydenotto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tietoa.html">Tietoa sivustosta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <h5 class="top-padding">Ota meihin yhteyttä täyttämällä alla oleva lomake</h5>
+
+            <form class="needs-validation" novalidate>
+                <div class="input-group">
+                    <span class="input-group-text">Asia koskee:</span>
+                    <select class="form-select" id="subject" required>
+                        <option selected disabled value>== Avaa valikko tästä == </option>
+                        <option>Haluan tilata keikan</option>
+                        <option>Pyydän haastattelua</option>
+                        <option>Haluan jättää palautetta nettisivuista</option>
+                        <option>Muu asia</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Valitse aihe jota asia koskee.
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">Nimi:</span>
+                    <input type="text" class="form-control" aria-label="firstname" placeholder="Etunimi" id="firstname"
+                        required>
+                    <input type="text" class="form-control" aria-label="lastname" placeholder="Sukunimi" id="lastname">
+                    <div class="invalid-feedback">
+                        Kerro meille ainakin etunimesi.
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">Sähköpostiosoite:</span>
+                    <input type="text" class="form-control" aria-label="email"
+                        placeholder="etunimi.sukunimi@verkkotunnus.fi" id="email" required>
+                    <div class="invalid-feedback">
+                        Kerro meille sähköpostiosoitteesi, jotta voimme olla yhteydessä sinuun.
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">Viesti:</span>
+                    <textarea class="form-control" aria-label="message" placeholder="Viestin sisältö" id="message"
+                        required></textarea>
+                    <div class="invalid-feedback">
+                        Älä unohda kertoa meille mitä yhteydenotto koskee.
+                    </div>
+                </div>
+                
+                <br><div>
+                    <button class="btn btn-outline-warning" type="submit">Lähetä viesti</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="validate_form_send.js"></script>
+</body>
+
+</html>
