@@ -82,7 +82,7 @@ body,
 {
     border-color: darkslategray;
     border-style: ridge;
-    width: fit-content;
+    /*width: fit-content;*/
 }
 
 
