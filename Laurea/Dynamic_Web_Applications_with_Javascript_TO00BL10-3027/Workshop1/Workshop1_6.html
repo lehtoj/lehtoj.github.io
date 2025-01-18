@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop 1</title>
+	<!-- script tag is where Javascript goes to -->
+	<script>
+		// Define an object to hold data for a person
+		var person = {
+			firstName: "John",
+			lastName: "Doe",
+			age: 50,
+			eyeColor: "blue",
+			address: "A street somewhere",
+			telephone: "123456789"
+		};
+
+		console.log(person.age);
+
+		const printInfo = function (person) {
+			console.log("firstname: " + person.firstName);
+			console.log("lastname: " + person.lastName);
+			console.log("age: " + person.age);
+			console.log("eyeColor: " + person.eyeColor);
+			console.log("address: " + person.address);
+			console.log("telephone: " + person.telephone);
+		};
+
+		printInfo(person);
+
+		var people = [
+			{
+				firstName: "John",
+				lastName: "Doe",
+				age: 50,
+				eyeColor: "blue",
+				address: "A street somewhere",
+				telephone: "123456789"
+			},
+			{
+				firstName: "Jane",
+				lastName: "Doe",
+				age: 40,
+				eyeColor: "green",
+				address: "Another street",
+				telephone: "987654321"
+			},
+			{
+				firstName: "Jack",
+				lastName: "Doe",
+				age: 30,
+				eyeColor: "brown",
+				address: "Yet another street",
+				telephone: "123123123"
+			},
+			{
+				firstName: "Jill",
+				lastName: "Doe",
+				age: 20,
+				eyeColor: "black",
+				address: "Totally different street",
+				telephone: "321321321"
+			}
+		]
+
+		people.forEach(person => {
+			printInfo(person);
+		});
+	</script>
+
+</head>
+
+<body>
+	<h1>Welcome to example page</h1>
+	<p> Lorem ipsum dolorem... </p>
+
+</body>
+
+</html>

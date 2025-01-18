@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop 1</title>
+	<!-- script tag is where Javascript goes to -->
+	<script>
+		// Returns true if age is over 18, otherwise returns false
+		function areYouOldEnough(age) {
+			var returnValue = true;
+			
+			if (age < 18) {
+				returnValue = false;
+				document.write("<h1>You're too young!</h1>");
+			} else {
+				document.write("<h1>You're old enough.</h1>");
+			}
+
+			console.log(returnValue);
+			return returnValue;
+		}
+
+		console.log( areYouOldEnough(16) )
+		document.write( areYouOldEnough(19) );
+		alert(areYouOldEnough(5));
+		alert(areYouOldEnough(25));
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

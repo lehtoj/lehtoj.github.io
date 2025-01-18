@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop 1</title>
+	<!-- script tag is where Javascript goes to -->
+	<script>
+		var x = 28;
+		var order = 'Beer';
+		var message;
+		
+		if (x < 15) {
+			message = "<h1>He's under 15!</h1>";
+		} else if (x >= 15 && x < 18) {
+			message = "<h2>It seems you're bit underaged.<h2>";
+		} else if (x >= 18 && x <= 30) {
+			message = "<h3>Young man, who ordered some " + order + "</h3>";
+		} else if (x > 30 && x <= 50) {
+			message = "<h4>Middle aged man, who ordered some " + order + "</h4>";
+		} else {
+			message = "<h1>He's over 50!</h1>";
+		}
+
+		document.write(message);
+		console.log(message);
+			
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
