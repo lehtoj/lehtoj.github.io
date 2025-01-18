@@ -30,14 +30,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             const directoryList = document.getElementById('directory-list');
 
-            // Example data - replace this with actual directory data
             const directoryContents = [
                 { name: 'Workshop1', type: 'directory' }
             ];
 
             directoryContents.forEach(item => {
                 const listItem = document.createElement('li');
-                listItem.textContent = item.name;
+                const link = document.createElement('a');
+                link.textContent = item.name;
+                link.href = item.type === 'directory' ? `${item.name}/` : item.name;
+                listItem.appendChild(link);
                 directoryList.appendChild(listItem);
             });
         });
