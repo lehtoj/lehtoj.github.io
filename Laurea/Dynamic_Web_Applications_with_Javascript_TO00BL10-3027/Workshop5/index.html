@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Directory Listing</h1>
+    <ul id="directory-list"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const directoryList = document.getElementById('directory-list');
+
+            const directoryContents = [
+                { name: 'workshop5-1.html', type: 'file' },
+                { name: 'workshop5-2.html', type: 'file' },
+                { name: 'workshop5-3.html', type: 'file' },
+                { name: 'workshop5-4.html', type: 'file' },
+                { name: 'shopping.js', type: 'file' }
+            ];
+
+            directoryContents.forEach(item => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.textContent = item.name;
+                link.href = item.type === 'directory' ? `${item.name}/` : item.name;
+                listItem.appendChild(link);
+                directoryList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+
+</html>
