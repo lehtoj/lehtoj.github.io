@@ -6,11 +6,16 @@
         <link rel="stylesheet" href="../css/styles.css">
         <script>
             function checkForm(event) {
-                var email = document.getElementsByName("email")[0].value;
-                var comment = document.getElementsByName("comment")[0].value;
+                var email = document.getElementsByName("email")[0];
+                var emailValue = email.value.trim();
 
-                var emailError = email.length < 6 || email.length > 15 || email.indexOf("@") === -1;
-                var commentError = comment.trim().length === 0 || comment.trim().length > 50;
+                var comment = document.getElementsByName("comment")[0];
+                var commentValue = comment.value.trim();
+
+                alert("Email: " + emailValue + "\nComment: " + commentValue);
+
+                var emailError = emailValue.length < 6 || emailValue.length > 15 || emailValue.indexOf("@") === -1;
+                var commentError = commentValue.length === 0 || commentValue.length > 50;
                 
                 var emailErrorMessage = document.getElementById("emailError");
                 var commentErrorMessage = document.getElementById("commentError");
@@ -20,6 +25,7 @@
                         emailErrorMessage = document.createElement("p");
                         emailErrorMessage.id = "emailError";
                         emailErrorMessage.style.color = "red";
+                        email.style.borderColor = "red";
                         document.getElementsByName("email")[0].parentNode.appendChild(emailErrorMessage);
                     }
                     emailErrorMessage.innerHTML = "Email must be between 6 and 15 characters and contain @";
@@ -27,6 +33,7 @@
                 } else {
                     if (emailErrorMessage != null) {
                         emailErrorMessage.parentNode.removeChild(emailErrorMessage);
+                        email.style.borderColor = "";
                     }
                 }
 
@@ -35,6 +42,7 @@
                         commentErrorMessage = document.createElement("p");
                         commentErrorMessage.id = "commentError";
                         commentErrorMessage.style.color = "red";
+                        comment.style.borderColor = "red";
                         document.getElementsByName("comment")[0].parentNode.appendChild(commentErrorMessage);
                     }
                     commentErrorMessage.innerHTML = "Comment cannot be empty and must be less than 50 characters";
@@ -42,6 +50,7 @@
                 } else {
                     if (commentErrorMessage != null) {
                         commentErrorMessage.parentNode.removeChild(commentErrorMessage);
+                        comment.style.borderColor = "";
                     }
                 }
             }

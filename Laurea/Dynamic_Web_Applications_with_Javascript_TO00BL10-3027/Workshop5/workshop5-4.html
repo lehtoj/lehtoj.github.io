@@ -10,29 +10,30 @@
 
                 switch (contactMethod) {
                     case "email":
-                        var email = document.getElementById("contactemailinput").value;
+                        var email = document.getElementById("contactemailinput").value.trim();
                         if (email.indexOf("@") === -1 || email.indexOf(".") === -1 || email.length < 6 ) {
                             alert("Invalid email address");
                             event.preventDefault();
                         }
                         break;
                     case "phone":
-                        var phone = document.getElementById("contactphoneinput").value;
-                        if (phone.length < 10 || phone.length > 13) {
+                        var phone = document.getElementById("contactphoneinput").value.trim();
+                        if (phone.length < 10 || phone.length > 20) {
                             alert("Invalid phone number");
                             event.preventDefault();
                         }
                         break;
-                    case "SMS":
-                        var sms = document.getElementById("contactsmsinput").value;
-                        if (phone.length < 10 || phone.length > 13) {
+                    case "sms":
+                        var sms = document.getElementById("contactsmsinput").value.trim();
+                        if (sms.length < 10 || sms.length > 20) {
                             alert("Invalid SMS number");
                             event.preventDefault();
                         }
                         break;
                 }
 
-                if (comment.trim().length === 0 || comment.trim().length > 50) {
+                var comment = document.getElementById("commentinput").value.trim();
+                if (comment.length === 0 || comment.length > 50) {
                     alert("Comment cannot be empty and must be less than 50 characters");
                     event.preventDefault();
                 }
@@ -63,7 +64,7 @@
                     
                     contactSMS.hidden = true;
                     contactSMSInput.value = "";
-                } else if (contactMethod === "SMS") {
+                } else if (contactMethod === "sms") {
                     contactSMS.hidden = false;
                     
                     contactEmail.hidden = true;
@@ -187,7 +188,7 @@
                 <select id="contactmethod" onchange="showContact()">
                     <option value="email">E-mail</option>
                     <option value="phone">Phone</option>
-                    <option value="SMS">SMS</option>
+                    <option value="sms">SMS</option>
                 </select>
             
             <div class="no-border"id="contactemail">
@@ -209,7 +210,7 @@
                 <label>
                     Comment:<br>
                 </label>
-                <textarea name="comment"></textarea>
+                <textarea name="comment" id="commentinput"></textarea>
             </div>
             <br>
             <input type="submit" value="Send">
