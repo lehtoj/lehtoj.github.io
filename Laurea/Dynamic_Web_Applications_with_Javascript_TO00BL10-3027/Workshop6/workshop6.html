@@ -27,6 +27,10 @@
 					var storage = window[storageType];
 					var destination = storage.getItem("destination");
 					var arrival = storage.getItem("arrival");
+					if (!destination || !arrival) {
+						console.warn("Destination or arrival not set in " + storageType);
+						return;
+					}
 					var services = JSON.parse(storage.getItem("services"))?.join(", ");
 					var elementId = storageType === "localStorage" ? "sessiondata" : "sessiondata2";
 					document.getElementById(elementId).innerHTML = "Destination: " + destination + "<br>Arrival: " + arrival + "<br>Services: " + services;
