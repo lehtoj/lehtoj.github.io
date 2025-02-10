@@ -63,7 +63,7 @@
 
 		function getWeatherData() {
 			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
+			xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
 			xmlhttp.send();
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -74,7 +74,7 @@
 
 		function parseWeatherData() {
 			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
+			xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Helsinki&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
 			xmlhttp.send();
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -89,7 +89,7 @@
 
 		function parseWeatherDateOfCity(city) {
 			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
+			xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
 			xmlhttp.send();
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -107,7 +107,7 @@
 				return;
 			}
 			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
+			xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=metric&mode=JSON&APPID=38bea0a76ac08516b92d57aa9a956bb9 ", true);
 			xmlhttp.send();
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
